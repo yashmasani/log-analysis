@@ -23,7 +23,7 @@ jobs:
           done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
-        input:
+        with:
           path: "dist/"
   deploy:
     environment:
