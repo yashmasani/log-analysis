@@ -13,7 +13,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: |
+      - name: Install pnpm
+        run: curl -fsSL https://get.pnpm.io/install.sh | sh -
+      - name: Build Files
+        run: |
           pnpm i
           pnpm build
       - name: Fix permissions
