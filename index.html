@@ -1,0 +1,43 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<link rel="icon" type="image/svg+xml" href="/vite.svg" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Off Logger Analysis</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="log-page-title">The Time Off Bot Analysis</h1>
+      <div id="log-options">
+        <div id="xaxis-dropdown-option" class="label-input">
+         <label for="xaxis">X Axis</label>
+          <select name="xaxis" id="xaxis-option" class="axis-dropdown-option">
+            <option value="content">Content</option>
+            <option value="log_date" selected>Log Date</option>
+            <option value="createdAt">Timestamp</option>
+          </select>
+        </div>
+        <div id="yaxis-dropdown-option" class="label-input">
+         <label for="yaxis">Y Axis</label>
+          <select name="yaxis" id="yaxis-option" class="axis-dropdown-option">
+            <option value="content" selected>Content</option>
+            <option value="log_date">Log Date</option>
+            <option value="createdAt">Timestamp</option>
+          </select>
+        </div>
+        <div id="log-option-separate">
+          <input type="checkbox" value="INFO">INFO</input>
+          <input type="checkbox" value="DEBUG">DEBUG</input>
+          <input type="checkbox" value="ERROR">ERROR</input>
+          <input type="checkbox" value="WARN">WARN</input>
+        </div>
+        <button id="log-options-apply"><h4>Apply Options</h4></button>
+      </div>
+      <div id="plotly-container">
+        <div id="log-chart"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

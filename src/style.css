@@ -1,0 +1,163 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #f9f9ee;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0;
+  padding: 0rem;
+  text-align: center;
+  width: 100%; 
+  height: 100%;
+}
+
+.card {
+  padding: 2em;
+}
+
+#plotly-container {
+  height: 70%;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+  border-radius: 10px;
+  transition: 1s;
+}
+
+#plotly-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+#log-options {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: black;
+}
+
+.axis-dropdown-option > select {
+  width: 5rem;
+  height: 2rem;
+}
+
+.label-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-input label {
+  margin-right: 1rem; 
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#log-options-apply {
+  height: 80%;
+  background-color: rgba(20, 20, 20, 0.9);
+}
+
+#log-options-apply h4 {
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.log-page-title {
+  color: #000000c4;
+}
+
+@media (min-width: 1280px) {
+  #plotly-container {
+    height: 700px;
+  }
+  #log-options {
+    height: 20vh;
+  }
+  #log-options-apply {
+    height: 4rem;
+  }
+}
+@media (max-width: 700px) {
+  #plotly-container {
+    height: 40vh;
+  }
+  #log-options {
+    height: 20vh;
+    flex-direction: column;
+  }
+  #log-options-apply {
+    height: 4rem;
+    padding: 0.2em 0.6em;
+  }
+}
