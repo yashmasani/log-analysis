@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 16
       - name: Install pnpm
-        run: curl -fsSL https://get.pnpm.io/install.sh | sh -
+        run: npm install -g pnpm
       - name: Build Files
         run: |
           pnpm i
