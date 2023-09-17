@@ -32,9 +32,6 @@ setupChart('log-chart', preprocess(mock));
 (async () => {
   const m = await fetch('https://timeoff.lol/log-activities', {
     method: 'GET',
-    headers: {
-      'Access-Control-Allow-Origin': '*'
-    }
   });
   mock = await m.json();
   setupChart('log-chart', preprocess(mock));
